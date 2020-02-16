@@ -1,6 +1,3 @@
-import com.relevantcodes.extentreports.ExtentReports;
-import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
@@ -31,8 +28,6 @@ public class PurchaseTestOnChrome {
 		driver.findElement(By.xpath("//*[contains(text(),' Add to basket')]")).click();
 		Assert.assertEquals(driver.getTitle(),"Beach bag");
 
-		//validaçoes
-		//ver melhor os threads
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[contains(text(),' Go to shopping basket')]")).click();
 

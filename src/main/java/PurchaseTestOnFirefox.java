@@ -25,8 +25,6 @@ public class PurchaseTestOnFirefox {
 		driver.findElement(By.xpath("//*[contains(text(),' Add to basket')]")).click();
 		Assert.assertEquals(driver.getTitle(),"Beach bag");
 
-		//validaçoes
-		//ver melhor os threads
 		Thread.sleep(4000);
 		driver.findElement(By.xpath("//button[contains(text(),' Go to shopping basket')]")).click();
 
@@ -56,14 +54,6 @@ public class PurchaseTestOnFirefox {
 
 
 		driver.close();
-
-
-
-
-
-
-
-
 
 	}
 }
