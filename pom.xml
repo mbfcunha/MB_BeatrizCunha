@@ -21,6 +21,29 @@
       <scope>compile</scope>
     </dependency>
   </dependencies>
+  <build>
+  <plugins>
+    <plugin>
+      <groupId>net.masterthought</groupId>
+      <artifactId>maven-cucumber-reporting</artifactId>
+      <version>3.7.0</version>
+      <executions>
+        <execution>
+          <id>execution</id>
+          <goals>
+            <goal>generate</goal>
+          </goals>
+          <configuration>
+            <projectName>mercedestests</projectName>
+            <outputDirectory>${project.build.directory}/${maven.build.timestamp}</outputDirectory>
+            <cucumberOutput>${project.build.directory}/cucumber-generated/</cucumberOutput>
+            <parallelTesting>true</parallelTesting>
+          </configuration>
+        </execution>
+      </executions>
+    </plugin>
+  </plugins>
+  </build>
 
 
 </project>

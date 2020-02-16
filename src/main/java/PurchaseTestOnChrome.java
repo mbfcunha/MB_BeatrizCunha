@@ -1,7 +1,14 @@
+import com.relevantcodes.extentreports.ExtentReports;
+import com.relevantcodes.extentreports.ExtentTest;
+import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
 
 public class PurchaseTestOnChrome {
 
@@ -53,10 +60,7 @@ public class PurchaseTestOnChrome {
 		Thread.sleep(5000);
 		Assert.assertEquals(driver.findElement(By.xpath("//*[contains(text(),'Your order data')]")).getText(),"Your order data");
 
-
 		driver.close();
-
-
 
 	}
 }
